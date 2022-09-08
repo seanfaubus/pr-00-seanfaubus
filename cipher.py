@@ -1,15 +1,34 @@
-from fileio import read_keyvalue
-# res = {test_keys[i]: test_values[i] for i in range(len(test_keys))}
+# from fileio import read_keyvalue
+# # res = {test_keys[i]: test_values[i] for i in range(len(test_keys))}
 def make_dictionary(l1, l2):
     # Write your code here
-    dict = {l1[i]: l2[i] for i in range(len(l1))}
+    dictionary = {l1[i]: l2[i] for i in range(len(l1))}
+    return dictionary
 
-    return dict
 
 def cipher(message, d):
     # Write your code here
-    pass
+    cipheredMessage = ""
+    for char in message:
+        if char in d.keys():
+            cipheredMessage += d[char]
+        else:
+            cipheredMessage += char
+    return cipheredMessage
 
-l1 = read_keyvalue('ciphercode.txt')[0]
-l2 = read_keyvalue('ciphercode.txt')[1]
-print(make_dictionary(l1,l2))
+# l1 = read_keyvalue('ciphercode.txt')[0]
+# l2 = read_keyvalue('ciphercode.txt')[1]
+# print(l1)
+# print(l2)
+# booboo = make_dictionary(l1,l2)
+# print(booboo)
+# strang = 'please cipher this message'
+# codeStrang = ''
+# for i in strang:
+#     if i in booboo.keys():
+#         codeStrang += booboo[i]
+#     else:
+#         codeStrang += i
+# print(codeStrang)
+#
+# print(cipher('please cipher this message', make_dictionary(l1,l1)))

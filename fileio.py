@@ -9,16 +9,16 @@ def read_keyvalue(filename):
         for i in text:
             if i.startswith('K'):
                 keyLetters.append(i[3:])
-                keyLetters = [char for word in keyLetters for char in word]
-                # keyLetters.pop()
-                # keyLetters.append(' ')
-                for i in range(len(keyLetters)):
-                    if keyLetters[i] == '\n':
-                        keyLetters[i] = ' '
+                keyLetters = [char for word in keyLetters for char in word if char != ' ']
+                keyLetters2 = keyLetters[:]
+                for i in range(len(keyLetters2)):
+                    if keyLetters2[i] == '\n':
+                        keyLetters2.remove(keyLetters2[i])
+
             else:
                 valueLetters.append(i[3:])
-                valueLetters = [char for word in valueLetters for char in word]
-        return keyLetters, valueLetters
+                valueLetters = [char for word in valueLetters for char in word  if char != ' ']
+        return keyLetters2, valueLetters
 
 
 def read_message(filename):
@@ -34,4 +34,9 @@ def write_ciphered_messages(ciphered_message, filename):
     pass
 
 
-print(read_keyvalue('ciphercode.txt'))
+l1 = read_keyvalue('ciphercode.txt')[0]
+l2 = read_keyvalue('ciphercode.txt')[1]
+print(l1)
+print(l2)
+print(len(l1))
+print(len(l2))
