@@ -1,2 +1,5 @@
-INFO 2022-09-08 11:15:39,963 - Logging initialized.
-ERROR 2022-09-08 11:15:39,965 - Error loading cipher code file.
+INFO 2022-09-08 14:22:06,367 - Logging initialized.
+INFO 2022-09-08 14:22:06,371 - Image loading succeeded.
+INFO 2022-09-08 14:22:06,371 - Creation of cipher dictionary succeeded.
+INFO 2022-09-08 14:22:06,371 - Messages to be ciphered read successfully.
+INFO 2022-09-08 14:22:06,375 - Ciphered messages written successfully.

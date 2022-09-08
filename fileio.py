@@ -1,8 +1,8 @@
 def read_keyvalue(filename):
     # Write your code here
     # Getting file input
-    path = "input/"
-    with open(path+filename, 'r') as f:
+    # path = "input/"
+    with open(filename, 'r') as f:
         keyLetters = []
         valueLetters = []
         text = f.readlines()
@@ -24,19 +24,27 @@ def read_keyvalue(filename):
 def read_message(filename):
     # Write your code here
     # Getting file input
-    path = "input/"
-    with open(path+filename, 'r') as f:
+    # path = "input/"
+    with open(filename, 'r') as f:
         text = f.readlines()
-    pass
+        messages = []
+        for line in text:
+            messages.append(line.strip())
+        # run message through cipher?
+    return messages
 
 def write_ciphered_messages(ciphered_message, filename):
     # Write your code here
-    pass
+    # path = 'output/'
+    with open(filename, 'w') as f:
+        f.writelines(ciphered_message)
 
 
-l1 = read_keyvalue('ciphercode.txt')[0]
-l2 = read_keyvalue('ciphercode.txt')[1]
-print(l1)
-print(l2)
-print(len(l1))
-print(len(l2))
+# l1 = read_keyvalue('ciphercode.txt')[0]
+# l2 = read_keyvalue('ciphercode.txt')[1]
+# print(l1)
+# print(l2)
+# print(len(l1))
+# print(len(l2))
+
+# print(read_message('messages.txt'))

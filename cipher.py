@@ -1,4 +1,4 @@
-# from fileio import read_keyvalue
+# from fileio import read_keyvalue, read_message
 # # res = {test_keys[i]: test_values[i] for i in range(len(test_keys))}
 def make_dictionary(l1, l2):
     # Write your code here
@@ -32,3 +32,5 @@ def cipher(message, d):
 # print(codeStrang)
 #
 # print(cipher('please cipher this message', make_dictionary(l1,l1)))
+# for message in read_message('messages.txt'):
+#     print(cipher(message, make_dictionary(l1,l2)))
