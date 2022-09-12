@@ -25,19 +25,23 @@ def read_message(filename):
     # Write your code here
     # Getting file input
     # path = "input/"
+    messages = []
     with open(filename, 'r') as f:
         text = f.readlines()
-        messages = []
         for line in text:
             messages.append(line.strip())
         # run message through cipher?
+    print(messages)
     return messages
+
+### FIXME trying to see total output
 
 def write_ciphered_messages(ciphered_message, filename):
     # Write your code here
     # path = 'output/'
-    with open(filename, 'w') as f:
-        f.writelines(ciphered_message)
+    with open(filename, 'a') as f:
+        f.write(ciphered_message + '\n')
+        
 
 
 # l1 = read_keyvalue('ciphercode.txt')[0]

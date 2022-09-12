@@ -8,12 +8,15 @@ def make_dictionary(l1, l2):
 
 def cipher(message, d):
     # Write your code here
+    messagesToWrite = []
     cipheredMessage = ""
     for char in message:
         if char in d.keys():
             cipheredMessage += d[char]
         else:
             cipheredMessage += char
+    messagesToWrite.append(cipheredMessage)
+    print('HI', messagesToWrite)
     return cipheredMessage
 
 # l1 = read_keyvalue('ciphercode.txt')[0]
