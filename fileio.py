@@ -31,7 +31,7 @@ def read_message(filename):
         for line in text:
             messages.append(line.strip())
         # run message through cipher?
-    print(messages)
+    # print(messages)
     return messages
 
 ### FIXME trying to see total output

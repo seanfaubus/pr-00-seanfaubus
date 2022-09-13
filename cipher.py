@@ -16,7 +16,7 @@ def cipher(message, d):
         else:
             cipheredMessage += char
     messagesToWrite.append(cipheredMessage)
-    print('HI', messagesToWrite)
+    # print('HI', messagesToWrite)
     return cipheredMessage
 
 # l1 = read_keyvalue('ciphercode.txt')[0]
